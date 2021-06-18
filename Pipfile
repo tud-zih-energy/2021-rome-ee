@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+lab-management-scripts = {editable = true, git = "git@gitlab.hrz.tu-chemnitz.de:tud-zih-energy/lab_management_scripts.git", ref = "master"}
+ipython = "*"
+jupyter = "*"
+click = "*"
+metricq = "*"
+pandas = "*"
+seaborn = "*"
+scikit-learn = "*"
+xlrd = "*"
+
+[requires]
+python_version = "3.8"

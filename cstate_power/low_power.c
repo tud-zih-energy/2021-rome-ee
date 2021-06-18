@@ -1,0 +1,36 @@
+#define REPNOP "rep;nop;"
+#define REPNOP_10 REPNOP REPNOP REPNOP REPNOP REPNOP REPNOP REPNOP REPNOP REPNOP REPNOP
+
+#define SQRTSD "sqrtsd %%xmm0, %%xmm0;"
+#define SQRTSD_10 SQRTSD SQRTSD SQRTSD SQRTSD SQRTSD SQRTSD SQRTSD SQRTSD SQRTSD SQRTSD
+
+#define FSQRT "fsqrt;"
+#define FSQRT_10 FSQRT FSQRT FSQRT FSQRT FSQRT FSQRT FSQRT FSQRT FSQRT FSQRT
+
+#define PAUSE "pause;"
+#define PAUSE_10 PAUSE PAUSE PAUSE PAUSE PAUSE PAUSE PAUSE PAUSE PAUSE PAUSE
+
+
+void main()
+{
+#pragma omp parallel
+{
+   double res;
+   while(1)
+   {
+#ifdef USE_PAUSE
+     asm(PAUSE_10 PAUSE_10 PAUSE_10 PAUSE_10 PAUSE_10);
+#endif
+// YES I KNOW IT IS THE SAME
+#ifdef USE_REPNOP
+     asm(REPNOP_10 REPNOP_10 REPNOP_10 REPNOP_10 REPNOP_10);
+#endif
+#ifdef USE_SQRTSD
+     asm (SQRTSD_10: "=&t" (res) : "xmm0" (327652875.32657) );
+#endif
+#ifdef USE_FSQRT
+     asm (FSQRT_10: "=&t" (res) : "0" (327652875.32657) );
+#endif
+   }
+}
+}
