@@ -21,7 +21,6 @@ This program is implemented in Python and provides an API usable from other Pyth
 ### TODO
 
 - Include source code of instrumented program in `cstate` folder
-- What in the fucking hell is `mixed-freq`???
 - What is `power-var` used for? Why does it say it uses AVX-512, but ROME does not support that, and the assembly looks like AVX2?
 - What is `RAPL_resolution`?
 
@@ -29,8 +28,8 @@ This program is implemented in Python and provides an API usable from other Pyth
 
 - Figure 1: `Green500/charts.ipynb`
 - Figure 2: no scripts involved
-- Figure 3: TODO???
-- Table I: TODO???
+- Figure 3: `ftalat/analyze_all.ipynb`
+- Table I: `mixed-freq/mixed-freq.ipynb`
 - Figure 4: `L3-frequencies/memory-latency-Core0-Core1-frequencies-pandas.ipynb`
 - Figure 5a: `RAM bandwidth/io-pstates/STREAM-IO_pstates-DRAM_frequencies-all p-states.ipynb` 
 - Figure 5b: `RAM latency/memory-latency-1S-RAM-frequencies-heatmap.ipynb`
