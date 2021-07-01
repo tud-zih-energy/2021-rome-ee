@@ -18,12 +18,6 @@ We developed and installed on all our test machines a helper program called `ela
 
 This program is implemented in Python and provides an API usable from other Python code, which some scripts use. These modules are called `lab_management`.
 
-### TODO
-
-- Include source code of instrumented program in `cstate` folder
-- What is `power-var` used for? Why does it say it uses AVX-512, but ROME does not support that, and the assembly looks like AVX2?
-- What is `RAPL_resolution`?
-
 ### Scripts used for Figures and Tables in the paper
 
 - Figure 1: `Green500/charts.ipynb`
@@ -31,7 +25,7 @@ This program is implemented in Python and provides an API usable from other Pyth
 - Figure 3: `ftalat/analyze_all.ipynb`
 - Table I: `mixed-freq/mixed-freq.ipynb`
 - Figure 4: `L3-frequencies/memory-latency-Core0-Core1-frequencies-pandas.ipynb`
-- Figure 5a: `RAM bandwidth/io-pstates/STREAM-IO_pstates-DRAM_frequencies-all p-states.ipynb` 
+- Figure 5a: `RAM bandwidth/io-pstates/STREAM-IO_pstates-DRAM_frequencies-all p-states.ipynb`
 - Figure 5b: `RAM latency/memory-latency-1S-RAM-frequencies-heatmap.ipynb`
 - Figure 6: `firestarter_frequency/plot_actual_frequency.ipynb`
 - Figure 7: `cstate_power/charts.ipynb`

@@ -1,5 +1,8 @@
 ### Power Variation with AVX-512
 
+AVX version of the `xor`-test from https://arxiv.org/pdf/1905.12468.pdf
+In the end, we did not use this program in the paper but include it nonetheless.
+
 ## Compilation
 
 Requires:
